@@ -1,0 +1,38 @@
+
+
+<div id="crudCliente" class="crud-container">
+    <h2>Cliente</h2>
+    <div class="crud-section">
+        <div class="input-group">
+            <input type="number" name="idCliente" placeholder="ID" required />
+            <button type="button">Buscar por ID</button>
+            <button type="button">Actualizar</button>
+            <button type="button">Eliminar</button>
+        </div>
+        <div class="input-group">
+            <input type="text" name="nombreCliente" placeholder="Nombre" required />
+        </div>
+        <div class="input-group">
+            <input type="email" name="correoCliente" placeholder="Correo" required />
+        </div>
+    </div>
+
+    <div class="table-section">
+        <table id="tableClientes">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Cliente A</td>
+                    <td>clientea@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

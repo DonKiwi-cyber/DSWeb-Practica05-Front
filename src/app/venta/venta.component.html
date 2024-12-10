@@ -1,0 +1,181 @@
+<!-- <div id="container">
+    <h2>Ventas</h2>
+
+    <div id="divCliente">
+        <h3>Información del cliente</h3>
+
+        <input
+            type="number"
+            [(ngModel)]="idCliente"
+            name="idCliente"
+            placeholder="ID"
+            required="required"
+        />
+        <button type="button" (click)="addClienteById()">Buscar por ID</button><br/>
+
+        <input
+            type="text"
+            [(ngModel)]="nombreCliente"
+            name="nombreCliente"
+            placeholder="Nombre"
+            required="required"
+        />
+        <button type="button" (click)="addClienteByNombre()">Buscar por nombre</button><br/>
+
+        <input
+            type="text"
+            [(ngModel)]="correoCliente"
+            name="correoCliente"
+            placeholder="Correo"
+            required="required"
+        />
+    </div>
+
+    <div id="divProducto">
+        <h3>Información del producto</h3>
+
+        <input
+            type="number"
+            [(ngModel)]="idProducto"
+            name="idProducto"
+            placeholder="ID"
+            required="required"
+        />
+        <button type="button" (click)="addProductoById()">Añadir por ID</button>
+
+        <input
+            type="text"
+            [(ngModel)]="descProducto"
+            name="descProducto"
+            placeholder="Descripción"
+            required="required"
+        />
+        <button type="button" (click)="addProductoByDescripcion()">Añadir por Descripcion</button><br/>
+    
+        <div id="tableProducto">
+            <table id="productos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let detalle of listaDetalles">
+                        <td>{{detalle.idProducto}}</td>
+                        <td>{{detalle.descripcionProducto}}</td>
+                        <td>{{detalle.precioProducto}}</td>
+                        <td>{{detalle.cantidadProducto}}</td>
+                        <td>{{detalle.total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button type="button" (click)="saveVenta()">Realizar venta</button>
+</div> -->
+
+<div id="container">
+    <h2>Ventas</h2>
+
+    <div id="divCliente" class="section">
+        <h3>Información del cliente</h3>
+
+        <div class="input-group">
+            <input
+                type="number"
+                [(ngModel)]="idCliente"
+                name="idCliente"
+                placeholder="ID"
+                required
+            />
+            <button type="button" (click)="addClienteById()">Buscar por ID</button>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="text"
+                [(ngModel)]="nombreCliente"
+                name="nombreCliente"
+                placeholder="Nombre"
+                required
+            />
+            <button type="button" (click)="addClienteByNombre()">Buscar por nombre</button>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="email"
+                [(ngModel)]="correoCliente"
+                name="correoCliente"
+                placeholder="Correo"
+                required
+            />
+        </div>
+    </div>
+
+    <div id="divProducto" class="section">
+        <h3>Información del producto</h3>
+
+        <div class="input-group">
+            <input
+                type="number"
+                name="idProducto"
+                [(ngModel)]="idProducto"
+                placeholder="ID"
+                required
+            />
+            <button type="button">Buscar por ID</button>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="text"
+                [(ngModel)]="descProducto"
+                name="descProducto"
+                placeholder="Descripción"
+                required
+            />
+            <button type="button">Buscar por Descripción</button>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="number"
+                [(ngModel)]="cantidadProducto"
+                name="cantidadProducto"
+                placeholder="Cantidad"
+                required
+            />
+        </div>
+
+        <div id="tableProducto">
+            <table id="productos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let detalle of listaDetalles">
+                        <td>{{detalle.idProducto}}</td>
+                        <td>{{detalle.descripcionProducto}}</td>
+                        <td>{{detalle.precioProducto}}</td>
+                        <td>{{detalle.cantidadProducto}}</td>
+                        <td>{{detalle.total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button type="button" id="saveButton" (click)="saveVenta()">Realizar venta</button>
+</div>

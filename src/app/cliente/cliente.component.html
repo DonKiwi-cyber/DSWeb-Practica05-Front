@@ -1,0 +1,41 @@
+<div id="crudProducto" class="crud-container">
+    <h2>Producto</h2>
+    <div class="crud-section">
+        <div class="input-group">
+            <input type="number" name="idProducto" placeholder="ID" required />
+            <button type="button">Buscar por ID</button>
+            <button type="button">Actualizar</button>
+            <button type="button">Eliminar</button>
+        </div>
+        <div class="input-group">
+            <input type="text" name="descripcionProducto" placeholder="Descripción" required />
+        </div>
+        <div class="input-group">
+            <input type="number" name="precioProducto" placeholder="Precio" required />
+        </div>
+        <div class="input-group">
+            <input type="number" name="stockProducto" placeholder="Stock" required />
+        </div>
+    </div>
+
+    <div class="table-section">
+        <table id="tableProductos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Producto A</td>
+                    <td>100</td>
+                    <td>50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
